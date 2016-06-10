@@ -14,11 +14,22 @@
     <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
+    <pre>
+    .___,
+    [O.o]    Certli
+    /)__) 
+    -"--"-
+    by n1b.ch
+    </pre>
     <div class="wrapper">
         <div id="add-pkcs10-block">
-            <label for="pem-text-block" style="font-weight:bold">Paste in PKCS#10:</label>
-            <textarea id="pem-text-block"></textarea>
-            <button onclick="createPKCS10();">Create</button>
+            <p style="font-weight:bold">PKCS#10 Certificate Request Attributes:</p>
+            <input id="CN" type="text" placeholder="Arthur Dent"></input>
+            <input id="O" type="text" placeholder="Vogon Enterprises"></input>
+            <input id="OU" type="text" placeholder="Division Earth"></input><br>
+            <input id="L" type="text" placeholder="Zurich"></input>
+            <input id="C" type="text" placeholder="CH"></input>
+            <button onclick="getClientCert();">Create</button>
         </div>
     </div>
 </body>
