@@ -41,9 +41,11 @@ npm install
    cat ca.key ca.crt > ca.pem
    ```
    
-   ### Run the server
-   ```
-   npm start
-   ```
+### Run the server
+```
+npm start
+```
    
-## Apache Conf
+## Apache/Nginx Conf
+
+TODO
