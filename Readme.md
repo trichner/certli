@@ -4,6 +4,8 @@ Simple Client-Server App that generates a valid Client Certificate signed by the
 
 One use-case is the replacement of HTTP Basic Authentication. Simply generate and install a certififcate and never enter a password again.
 
+## Screenshot
+![Alt text](screenie.png?raw=true "Screenie")
 
 ## Setup
 - install dependencies

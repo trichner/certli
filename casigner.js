@@ -14,7 +14,7 @@ class CASigner extends Transform{
 			args.push(`pass:${options.caPassword}`);
 		}
 
-		let promisedChild = spawn('openssl',, { capture: [ 'stdout', 'stderr' ]})
+		let promisedChild = spawn('openssl',args, { capture: [ 'stdout', 'stderr' ]})
 		this.child = promisedChild.childProcess;
 		let self = this;
 		promisedChild.then((result)=>{
