@@ -7,7 +7,7 @@ class CASigner extends Transform{
 		super(options);
 		options = options || {};
 		let caFile = options.caFile || 'ca.pem';
-		let args = ['x509', '-req', '-days', '3650', '-CA', caFile,'-CAcreateserial', '-CAserial', 'ca.seq'];
+		let args = ['x509', '-req', '-days', '30', '-CA', caFile,'-CAcreateserial', '-CAserial', 'ca.seq'];
 		
 		if(options.caPassword){
 			args.push('-passin');
