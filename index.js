@@ -16,6 +16,6 @@ router.post('/cert.pem', function (req, res) {
 
 app.use(conf.prefix,router);
 app.listen(conf.port, function () {
-  console.log(`Certli listening on port ${conf.port}!`);
+  console.log('Certli listening on port ' + conf.port);
 });
 
