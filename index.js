@@ -1,26 +1,21 @@
 'use strict';
 const CASigner = require('./casigner.js');
 const express = require('express');
-const basicAuth = require('basic-auth-connect');
+const conf = require('./conf.json');
 
-const USER = 'admin';
-const PASSWORD = '1234';
-
+const router = express.Router();
 const app = express();
 
-/* OPTIONAL: Protect with HTTP basic auth */
-//app.use(basicAuth(USER, PASSWORD));
+router.use(express.static(__dirname + '/public'));
 
-app.use(express.static(__dirname + '/public'));
-
-app.post('/cert.pem', function (req, res) {
+router.post('/cert.pem', function (req, res) {
 	res.set('Content-Type', 'text/plain');
   	let signer = new CASigner();
   	req.pipe(signer).pipe(res);
 });
 
-
-app.listen(3000, function () {
-  console.log('Certli listening on port 3000!');
+app.use(conf.prefix,router);
+app.listen(conf.port, function () {
+  console.log(`Certli listening on port ${conf.port}!`);
 });
 
