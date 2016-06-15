@@ -94,7 +94,7 @@ function getClientCert() {
             let p12b64 = forge.util.encode64(p12Der);
 
             downloadP12B64('client.p12',p12b64);
-            download('client.crt',pems.join(''));
+            download('client.crt',[pem, key].join(''));
         })
 }
 
