@@ -49,3 +49,14 @@ npm start
 ## Apache/Nginx Conf
 
 TODO
+
+
+## Client Cert in CLI
+```
+openssl genrsa 2048 > client.key
+openssl req -new -key client.key > client.csr
+
+openssl x509 -req -days 365 -CA ca.pem -set_serial 1 < client.csr > client.crt
+
+openssl pkcs12 -export -clcerts -in client.crt -inkey client.key > client.p12
+```

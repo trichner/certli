@@ -10,7 +10,14 @@
     <script type="text/javascript" src="pkijs/asn1.js"></script>
     <script type="text/javascript" src="pkijs/x509_schema.js"></script>
     <script type="text/javascript" src="pkijs/x509_simpl.js"></script>
+    <script type="text/javascript" src="pkijs/pkcs12_simpl.js"></script>
+    <script type="text/javascript" src="pkijs/pkcs12_schema.js"></script>
+    <script type="text/javascript" src="pkijs/cms_simpl.js"></script>
+    <script type="text/javascript" src="pkijs/cms_schema.js"></script>
     <script type="text/javascript" src="encoding/encoding.js"></script>
+    <script type="text/javascript" src="forge/forge.min.js"></script>
+    <script type="text/javascript" src="minions.js"></script>
+    <script type="text/javascript" src="pkcs12.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
@@ -24,11 +31,12 @@
     <div class="wrapper">
         <div id="add-pkcs10-block">
             <p style="font-weight:bold">PKCS#10 Certificate Request Attributes:</p>
-            <input id="CN" type="text" placeholder="Arthur Dent"></input>
-            <input id="O" type="text" placeholder="Vogon Enterprises"></input>
-            <input id="OU" type="text" placeholder="Division Earth"></input><br>
-            <input id="L" type="text" placeholder="Zurich"></input>
-            <input id="C" type="text" placeholder="CH"></input>
+            <input id="CN" type="text" placeholder="Arthur Dent (CN)">
+            <input id="O" type="text" placeholder="Vogon Enterprises (O)">
+            <input id="OU" type="text" placeholder="Division Earth (OU)"><br>
+            <input id="L" type="text" placeholder="Zurich (L)">
+            <input id="C" type="text" placeholder="CH (C)">
+            <input id="password" type="text" placeholder="Password"><br>
             <button onclick="getClientCert();">Create, Sign &amp; Download</button>
         </div>
     </div>
