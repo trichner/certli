@@ -91,6 +91,13 @@ server {
 
 ```
 
+### Apache
+Basic:
+```
+SSLVerifyClient require
+SSLVerifyDepth 1
+SSLCACertificateFile "conf/ssl.crt/ca.pem"
+```
 
 
 ## Client Cert in CLI
